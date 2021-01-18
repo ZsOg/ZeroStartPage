@@ -1,3 +1,31 @@
+$(document).ready(function() {
+    //判断窗口大小，添加输入框自动完成
+    var wid = $("body").width();
+    if (wid < 640) {
+        //$(".wd").attr('autocomplete', 'off');
+    } else {
+        $(".wd").focus();
+    }
+    //菜单点击
+    $("#menu").click(function(event) {
+        $(this).toggleClass('on');
+        $(".list").toggleClass('closed');
+        $(".mywth").toggleClass('hidden');
+    });
+    $("#content").click(function(event) {
+        $(".on").removeClass('on');
+        $(".list").addClass('closed');
+        $(".mywth").removeClass('hidden');
+        $('#word').hide();
+    });
+    $(".mywth").click(function(event) {
+        var wt = $("body").width();
+        if (wt < 750 || wt == 750) {
+            //window.location.href = "https://tianqi.qq.com/";
+            window.location.href = "/weather/";
+        }
+    });
+});
 //关键词sug
 $(function() {
     //当键盘键被松开时发送Ajax获取数据
