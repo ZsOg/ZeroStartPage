@@ -1,3 +1,18 @@
+<?php
+//禁用错误报告
+error_reporting(0);
+$t=htmlspecialchars($_GET["t"]);
+$q=htmlspecialchars($_POST["q"]);
+if (empty($q)) {
+}else{
+  if ($t=="b"){
+    echo'<script>window.location.href="//www.baidu.com/s?ie=utf-8&word='.$q.'";</script>';
+  }else{
+    //默认谷歌
+    echo'<script>window.location.href="https://www.google.com.hk/search?hl=zh&q='.$q.'";</script>';
+  }
+};
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
