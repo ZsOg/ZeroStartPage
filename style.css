@@ -1,176 +1,246 @@
 @charset "utf-8";
+
 /*@import url(//fonts.loli.net/earlyaccess/notosansscsliced.css);*/
 * {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
+
+html,
 body {
-    background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: whitesmoke;
 }
+
+html {
+  font-family: 'Noto Sans SC Sliced', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
+  font-weight: 500;
+  color: #000;
+}
+
+form,
+input,
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+ul,
+li {
+  display: block;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 #content {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-#menu {
-    width: 50px;
-    height: 50px;
-    transform: scale(0.8);
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    z-index: 2000000;
-    cursor: pointer;
-    transition: 0.5s;
+
+#menuBtn {
+  width: 50px;
+  height: 50px;
+  transform: scale(0.8);
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  z-index: 2000000;
+  cursor: pointer;
+  transition: 0.5s;
 }
-#menu i {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 24px auto;
-    width: 30px;
-    height: 2px;
-    background: #777;
+
+#menuBtn i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 24px auto;
+  width: 30px;
+  height: 2px;
+  background: #777;
 }
-#menu i:before {
-    content: '';
-    width: 20px;
-    height: 2px;
-    top: -8px;
-    background: #777;
-    position: absolute;
-    right: 0;
+
+#menuBtn i:before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  top: -8px;
+  background: #777;
+  position: absolute;
+  right: 0;
 }
-#menu i:after {
-    content: '';
-    width: 20px;
-    height: 2px;
-    bottom: -8px;
-    background: #777;
-    position: absolute;
-    left: 0;
+
+#menuBtn i:after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  bottom: -8px;
+  background: #777;
+  position: absolute;
+  left: 0;
 }
-#menu.on {
-    right: 380px;
-    background: #29f;
-    border-radius: 25px;
-    box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
+
+#menuBtn.on {
+  right: 380px;
+  background: #29f;
+  border-radius: 25px;
+  box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
 }
-#menu.on i {
-    width: 20px;
-    background: #fff;
+
+#menuBtn.on i {
+  width: 20px;
+  background: #fff;
 }
-#menu.on i:before {
-    top: -5px;
-    transform: rotate(45deg);
-    width: 14px;
-    right: -1px;
-    left: auto;
-    background: #fff;
+
+#menuBtn.on i:before {
+  top: -5px;
+  transform: rotate(45deg);
+  width: 14px;
+  right: -1px;
+  left: auto;
+  background: #fff;
 }
-#menu.on i:after {
-    bottom: -5px;
-    transform: rotate(-45deg);
-    width: 14px;
-    right: -1px;
-    left: auto;
-    background: #fff;
+
+#menuBtn.on i:after {
+  bottom: -5px;
+  transform: rotate(-45deg);
+  width: 14px;
+  right: -1px;
+  left: auto;
+  background: #fff;
 }
+
 .list {
-    width: 337px;
-    padding: 0 20px;
-    height: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    position: absolute;
-    right: 0px;
-    z-index: 2000;
-    /*background: #222d46;*/
-    background: rgb(41 53 80 / 0.6);
-    transition: 0.3s all linear;
+  width: 337px;
+  padding: 0 20px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0px;
+  z-index: 2000;
+  /*background: #222d46;*/
+  background: rgb(41 53 80 / 0.6);
+  transition: 0.3s all linear;
 }
+
 .list.closed {
-    right: -380px;
+  right: -380px;
 }
+
 .list ul {
-    width: 330px;
-    float: left;
-    padding: 0 0 20px;
-    margin-bottom: 20px;
+  width: 330px;
+  float: left;
+  padding: 0 0 20px;
+  margin-bottom: 20px;
 }
+
 .list ul li {
-    float: left;
-    margin: 5px;
-    width: 100px;
-    height: 30px;
-    text-align: left;
-    line-height: 30px;
+  float: left;
+  margin: 5px;
+  width: 100px;
+  height: 30px;
+  text-align: left;
+  line-height: 30px;
 }
+
 .list ul li a {
-    width: 100%;
-    border-radius: 5px;
-    transition: 0.2s all linear;
-    height: 100%;
-    display: block;
-    color: #fff;
-    font-weight: 500;
-    background: #293550;
-    text-align: left;
-    font-size: 12px;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.2s all linear;
+  height: 100%;
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  background: #293550;
+  text-align: left;
+  font-size: 12px;
 }
+
 .list ul li:hover a {
-    color: #fff;
-    background-color: #29f;
-    background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
-    box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
+  color: #fff;
+  background-color: #29f;
+  background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
+  box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
 }
+
 .list ul li.title {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    margin: 30px 0 0;
-    text-align: left;
-    text-indent: 10px;
-    /*border-bottom: 1px dashed #dedede;*/
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 30px 0 0;
+  text-align: left;
+  text-indent: 10px;
+  /*border-bottom: 1px dashed #dedede;*/
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 svg.icon {
-    width: 14px;
-    height: 14px;
-    margin: 0 5px 0 8px;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
+  width: 14px;
+  height: 14px;
+  margin: 0 5px 0 8px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
+
 .list ul li.title svg.icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
+
 @media (max-width: 640px) {
-    #menu.on {
-        right: 270px;
-    }
-    .list {
-        width: 227px;
-    }
-    .list ul {
-        width: 220px;
-    }
-    #menu {
-        top: 5px;
-    }
+  #menuBtn.on {
+    right: 270px;
+  }
+
+  .list {
+    width: 227px;
+  }
+
+  .list ul {
+    width: 220px;
+  }
+
+  #menuBtn {
+    top: 5px;
+  }
 }
+
+@media (max-height: 420px) {
+  #menuBtn {
+    display: none;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #162035;
-    }
+  body {
+    background-color: #162035;
+  }
 }
-#menuBtn input:checked + label {
-	right: 0;
+.opened {
+  right: 0px;
 }
-#menuBtn input:checked ~ ul {
-	right: -200px;
+
+.closed {
+  right: -300px;
 }
