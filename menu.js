@@ -16,13 +16,13 @@ $(document).ready(function() {
         $(".list").addClass('closed');
     });
 });
-var list = document.getElementById("list")
+var menu = document.getElementById("menu")
 var showHide = document.getElementById("showHide")
 showHide.onclick = function() {
-    if (list.offsetLeft == 0) {
-        list.style['margin-left'] = -300 + "px"
+    if (menu.offsetLeft == 0) {
+        menu.style['margin-left'] = -300 + "px"
     } else {
-        list.style['margin-left'] = 0 + "px"
+        menu.style['margin-left'] = 0 + "px"
     }
 }
 function showHide() {
