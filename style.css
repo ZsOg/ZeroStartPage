@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*@import url(//fonts.loli.net/earlyaccess/notosansscsliced.css);*/
 * {
   padding: 0;
@@ -7,7 +6,6 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-
 html,
 body {
   width: 100%;
@@ -16,13 +14,11 @@ body {
   overflow: hidden;
   background: whitesmoke;
 }
-
 html {
   font-family: 'Noto Sans SC Sliced', PingFangSC-Light, Microsoft YaHei UI, Microsoft YaHei, helvetica, sans-serif;
   font-weight: 500;
   color: #000;
 }
-
 form,
 input,
 button {
@@ -32,29 +28,24 @@ button {
   outline: none;
   background: none;
 }
-
 input::-webkit-input-placeholder {
   color: #ccc;
   letter-spacing: 2px;
   font-size: 16px;
 }
-
 ul,
 li {
   display: block;
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: #000;
 }
-
 #content {
   width: 100%;
   height: 100%;
 }
-
 #menuBtn {
   width: 50px;
   height: 50px;
@@ -66,7 +57,6 @@ a {
   cursor: pointer;
   transition: 0.5s;
 }
-
 #menuBtn i {
   position: absolute;
   left: 0;
@@ -76,7 +66,6 @@ a {
   height: 2px;
   background: #777;
 }
-
 #menuBtn i:before {
   content: '';
   width: 20px;
@@ -86,7 +75,6 @@ a {
   position: absolute;
   right: 0;
 }
-
 #menuBtn i:after {
   content: '';
   width: 20px;
@@ -96,19 +84,16 @@ a {
   position: absolute;
   left: 0;
 }
-
 #menuBtn.on {
   right: 380px;
   background: #29f;
   border-radius: 25px;
   box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
 }
-
 #menuBtn.on i {
   width: 20px;
   background: #fff;
 }
-
 #menuBtn.on i:before {
   top: -5px;
   transform: rotate(45deg);
@@ -117,7 +102,6 @@ a {
   left: auto;
   background: #fff;
 }
-
 #menuBtn.on i:after {
   bottom: -5px;
   transform: rotate(-45deg);
@@ -126,8 +110,7 @@ a {
   left: auto;
   background: #fff;
 }
-
-.list {
+.list.opened {
   width: 337px;
   padding: 0 20px;
   height: 100%;
@@ -140,19 +123,18 @@ a {
   background: rgb(41 53 80 / 0.6);
   transition: 0.3s all linear;
 }
-
 .list.closed {
   right: -380px;
+  display: none;
 }
-
-.list ul {
+.list.opened ul {
   width: 330px;
   float: left;
   padding: 0 0 20px;
   margin-bottom: 20px;
 }
 
-.list ul li {
+.list.opened ul li {
   float: left;
   margin: 5px;
   width: 100px;
@@ -161,7 +143,7 @@ a {
   line-height: 30px;
 }
 
-.list ul li a {
+.list.opened ul li a {
   width: 100%;
   border-radius: 5px;
   transition: 0.2s all linear;
@@ -174,14 +156,14 @@ a {
   font-size: 12px;
 }
 
-.list ul li:hover a {
+.list.opened ul li:hover a {
   color: #fff;
   background-color: #29f;
   background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
   box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
 }
 
-.list ul li.title {
+.list.opened ul li.title {
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -203,7 +185,7 @@ svg.icon {
   overflow: hidden;
 }
 
-.list ul li.title svg.icon {
+.list.opened ul li.title svg.icon {
   width: 20px;
   height: 20px;
 }
@@ -213,11 +195,11 @@ svg.icon {
     right: 270px;
   }
 
-  .list {
+  .list.opened {
     width: 227px;
   }
 
-  .list ul {
+  .list.opened ul {
     width: 220px;
   }
 
