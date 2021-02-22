@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Zero起始页</title>
-  <meta property="og:image" content="https://img12.360buyimg.com/ddimg/jfs/t1/145323/35/18630/80614/5fdb251fE50ce712c/8eb59dfa38caab0d.png">
   <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/bucdn/homepage@latest/favicon.png">
   <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/bucdn/homepage@latest/favicon.png">
   <link rel='stylesheet' id='font-awesome-css' href='https://cdn.jsdelivr.net/gh/bucdn/homepage@latest/2/css/font-awesome.min.css?ver=1.1202' type='text/css' media='all' />
@@ -21,7 +20,8 @@
       var refreshHours = new Date().getHours();
       if ((new Date().getHours() >= 19 || new Date().getHours() < 7)) {
         // 指定时间执行
-        document.getElementById('day').classList.add('black')
+        document.getElementById('content').classList.add('night')
+        document.getElementById('')
       }
     }, 1000);
   </script>
@@ -32,7 +32,6 @@
       background: #e3e4e5;
       border-bottom: 1px solid #ddd;
     }
-
     .navBox {
       margin: 0px auto;
       width: 1190px;
@@ -41,7 +40,7 @@
   </style>
 </head>
 
-<body id="day" class="">
+<body id="content" class="">
   <div id="nav" style="margin: 10px 15px 0;">
     <div id="navBox">
       <div id="navBar">
@@ -53,10 +52,7 @@
   </div>
   <div id="menu">
     <div id="menuBtn">
-      <button class="showMenu" id="showMenu" onclick="showMenu();" style="display: none;">&#9776;</button>
-      <label for="showMenu">
-        <i></i>
-      </label>
+      <button class="showMenu" id="showMenu" onclick="showMenu();">&#9776;</button>
     </div>
     <div class="icon">
       <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
@@ -971,7 +967,7 @@
       </svg>
     </div>
     <div class="list closed" id="list">
-      <input type="button" value="X" onclick="hideMenu();">
+      <input type="button" id="closeMenu" value="X" onclick="hideMenu();">
       <ul>
         <!------>
         <li class="title"><svg class="icon" aria-hidden="true">

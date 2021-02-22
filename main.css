@@ -180,30 +180,30 @@
     white-space: nowrap
   }
 }
-/* --- black --- */
-.black {
+/* --- night --- */
+.night {
   background-color: #26282a
 }
-.black, .black a:not(.btn), .black .button>a {
+.night, .night a:not(.btn), .night .button>a {
   color: #ddd
 }
-.black .tpwthwidt .text_235ileA, .black .tpwthwidt .title_2Cea4o9, .black .comments-area label {
+.night .tpwthwidt .text_235ileA, .night .tpwthwidt .title_2Cea4o9, .night .comments-area label {
   color: #bbb
 }
-.black .text-gray, .black .comment-body {
+.night .text-gray, .night .comment-body {
   color: #888
 }
-.black .xe-widget.xe-conversations, .black #search-text, .black .search-type input:checked+label, .black .search-type input:hover+label, .black .panel, .black .comments-area {
+.night .xe-widget.xe-conversations, .night #search-text, .night .search-type input:checked+label, .night .search-type input:hover+label, .night .panel, .night .comments-area {
   background-color: #3d4044
 }
-.black .s-type-list {
+.night .s-type-list {
   background-color: #1f2123;
   box-shadow: 0 9px 20px rgba(0, 0, 0, .3)
 }
-.black .s-type-list:before {
+.night .s-type-list:before {
   border-bottom-color: #1f2123
 }
-.black .magi-day-night label>span {
+.night .magi-day-night label>span {
   color: #fff;
   text-decoration: #fff;
 }
