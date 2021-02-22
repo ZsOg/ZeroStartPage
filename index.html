@@ -21,7 +21,8 @@
       var refreshHours = new Date().getHours();
       if ((new Date().getHours() >= 19 || new Date().getHours() < 7)) {
         // 指定时间执行
-        document.getElementById('day').classList.add('black')
+        document.getElementById('content').classList.add('night')
+        document.getElementById('')
       }
     }, 1000);
   </script>
@@ -32,7 +33,6 @@
       background: #e3e4e5;
       border-bottom: 1px solid #ddd;
     }
-
     .navBox {
       margin: 0px auto;
       width: 1190px;
@@ -41,7 +41,7 @@
   </style>
 </head>
 
-<body id="day" class="">
+<body id="content" class="">
   <div id="nav" style="margin: 10px 15px 0;">
     <div id="navBox">
       <div id="navBar">
