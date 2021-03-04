@@ -1,4 +1,3 @@
-
 //菜单点击
 function showMenu() {
   list.setAttribute("class", "list opened")
