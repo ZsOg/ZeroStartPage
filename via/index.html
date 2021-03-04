@@ -1240,18 +1240,24 @@
         <span></span>
         <div class="s-type-list animated fadeInUp">
           <label for="type-search">搜索</label>
-          <label for="type-zhihu">社区</label>
-          <label for="type-taobao1">生活</label>
-          <label for="type-zhaopin">求职</label>
-          <label for="type-tool">工具（有Bug）</label>
+          <label for="type-community">社区</label>
+          <label for="type-life">生活</label>
+          <label for="type-job">求职</label>
+          <label for="type-tool">工具</label>
         </div>
       </div>
       <div class="search-group group-a">
         <span class="type-text">搜索</span>
         <ul class="search-type">
           <li>
-            <input hidden type="radio" name="type" id="type-search" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下">
+            <input hidden type="radio" name="type" id="type-search" value="_blank" data-placeholder="点搜索是没用的，快选择一个引擎吧！">
             <label for="type-search">
+              <span>--></span>
+            </label>
+          </li>
+          <li>
+            <input hidden type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下">
+            <label for="type-baidu">
               <span style="color:#0084ff">百度</span>
             </label>
           </li>
@@ -1298,9 +1304,15 @@
           </li>
         </ul>
       </div>
-      <div class="search-group group-b">
+      <div class="search-group group-c">
         <span class="type-text">社区</span>
         <ul class="search-type">
+          <li>
+            <input hidden type="radio" name="type" id="type-community" value="_blank" data-placeholder="点搜索是没用的，快选择一个引擎吧！">
+            <label for="type-community">
+              <span>--></span>
+            </label>
+          </li>
           <li>
             <input hidden type="radio" name="type" id="type-zhihu" value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎">
             <label for="type-zhihu">
@@ -1331,15 +1343,20 @@
               <span style="color:#428bca">搜外问答</span>
             </label>
           </li>
-
         </ul>
       </div>
       <div class="search-group group-d">
         <span class="type-text">生活</span>
         <ul class="search-type">
           <li>
-            <input hidden type="radio" name="type" id="type-taobao1" value="https://s.taobao.com/search?q=" data-placeholder="淘宝">
-            <label for="type-taobao1">
+            <input hidden type="radio" name="type" id="type-life" value="_blank" data-placeholder="点搜索是没用的，快选择一个引擎吧！">
+            <label for="type-life">
+              <span>--></span>
+            </label>
+          </li>
+          <li>
+            <input hidden type="radio" name="type" id="type-taobao" value="https://s.taobao.com/search?q=" data-placeholder="淘宝">
+            <label for="type-taobao">
               <span style="color:#f40">淘宝</span>
             </label>
           </li>
@@ -1379,6 +1396,12 @@
         <span class="type-text">求职</span>
         <ul class="search-type">
           <li>
+            <input hidden type="radio" name="type" id="type-job" value="_blank" data-placeholder="点搜索是没用的，快选择一个引擎吧！">
+            <label for="type-job">
+              <span>--></span>
+            </label>
+          </li>
+          <li>
             <input hidden type="radio" name="type" id="type-zhaopin" value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘">
             <label for="type-zhaopin">
               <span style="color:#689fee">智联招聘</span>
@@ -1404,9 +1427,15 @@
           </li>
         </ul>
       </div>
-      <div class="search-group group-c">
+      <div class="search-group group-b">
         <span class="type-text">工具</span>
         <ul class="search-type">
+          <li>
+            <input hidden type="radio" name="type" id="type-tool" value="_blank" data-placeholder="点搜索是没用的，快选择一个引擎吧！">
+            <label for="type-tool">
+              <span>--></span>
+            </label>
+          </li>
           <li>
             <input hidden type="radio" name="type" id="type-br" value="http://rank.chinaz.com/all/" data-placeholder="请输入网址(不带http://)">
             <label for="type-br">
