@@ -2,3 +2,8 @@
   font-size: 20px;
   text-align: center
 }
+@media screen and (max-width:767px) {
+  .time .show_time {
+    font-size: 10px;
+  }
+}
